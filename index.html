@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+  <h1 id="formTitle"></h1>
+
+  <form id="cadastroForm" onsubmit="return cadastrarCliente(event)">
+    <label for="nomeInput">Nome:</label>
+    <input type="text" id="nomeInput" required>
+    <br><br>
+  
+    <label for="idInput">ID:</label>
+    <input type="text" id="idInput" required>
+    <br><br>
+  
+    <label for="tipoClienteSelect">Tipo de Cliente:</label>
+    <select id="tipoClienteSelect" onchange="exibirCamposAdicionais()">
+      <option value="pessoaFisica">Pessoa Física</option>
+      <option value="pessoaJuridica">Pessoa Jurídica</option>
+    </select>
+    <br><br>
+  
+    <div id="camposAdicionais"></div>
+  
+    <label for="enderecoInput">Endereço:</label>
+    <input type="text" id="enderecoInput" required>
+    <br><br>
+  
+    <label for="cepInput">CEP:</label>
+    <input type="text" id="cepInput" required>
+    <br><br>
+  
+    <label for="dataNascimentoInput">Data de Nascimento:</label>
+    <input type="text" id="dataNascimentoInput" required>
+    <br><br>
+  
+    <label for="vendedorInput">Vendedor:</label>
+    <input type="text" id="vendedorInput" required>
+    <br><br>
+  
+    <label for="limiteCreditoInput">Limite de Crédito:</label>
+    <input type="text" id="limiteCreditoInput" required>
+    <br><br>
+  
+    <input type="submit" value="Cadastrar">
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
